@@ -56,3 +56,10 @@ document.querySelector('.logo').addEventListener('mouseover', function() {
 document.querySelector('.logo').addEventListener('mouseout', function() {
     this.style.opacity = '1';
 });
+
+// Theme Toggle Functionality
+const themeSwitch = document.getElementById("theme-switch");
+
+themeSwitch.addEventListener("change", () => {
+    document.body.classList.toggle("dark-theme");
+});
