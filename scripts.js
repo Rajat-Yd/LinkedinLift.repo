@@ -57,9 +57,24 @@ document.querySelector('.logo').addEventListener('mouseout', function() {
     this.style.opacity = '1';
 });
 
-// Theme Toggle Functionality
-const themeSwitch = document.getElementById("theme-switch");
+let currentSlide = 0;
+const slides = document.querySelectorAll('.testimonial-slide');
 
-themeSwitch.addEventListener("change", () => {
-    document.body.classList.toggle("dark-theme");
-});
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Initialize the first slide as visible
+showSlide(currentSlide);

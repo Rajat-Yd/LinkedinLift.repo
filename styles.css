@@ -29,6 +29,7 @@ header {
     padding: 20px 0;
 }
 header .container {
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,7 +42,7 @@ header .container {
 }
 
 .logo img{
-    max-height: 150px; /* Adjust as needed for a balanced height */
+    max-height: 100px; /* Adjust as needed for a balanced height */
     width: auto; /* Maintains the aspect ratio */
     padding: 5px; /* Adds a bit of space around the image */
 }
@@ -93,11 +94,7 @@ nav ul li a:hover {
 
 
 header .cta-button {
-    color: white;
     text-decoration: none;
-}
-header .cta-button {
-    background-color: white;
     color: var(--secondary-color);
     padding: 10px 20px;
     border-radius: 5px;
@@ -111,6 +108,7 @@ header .cta-button:hover {
 
 /* Hero Section */
 .hero {
+    height: 350px;
     background: linear-gradient(to right, var(--primary-color), #005d91);
     color: white;
     text-align: center;
@@ -125,7 +123,6 @@ header .cta-button:hover {
     margin-bottom: 20px;
 }
 .hero .cta-button {
-    background-color: white;
     text-decoration: none;
     color: var(--secondary-color);
     padding: 10px 20px;
@@ -133,7 +130,7 @@ header .cta-button:hover {
     font-weight: bold;
     transition: background-color 0.3s;
 }
-.hero .cta-button:hover {
+.hero .cta-button1:hover {
     background-color: var(--button-hover);
     color: white;
 }
@@ -373,37 +370,138 @@ header .cta-button:hover {
 
 
 /* Testimonials Section */
-.testimonials {
-    padding: 60px 0;
-    background-color: #eef3f7;
-}
-
 .testimonial {
-    margin: 20px auto;
-    max-width: 600px;
+    height: 400px;
+    position: relative;
+    top: 0;
     padding: 20px;
-    background-color: #fff;
+    margin: 20px 0;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
 .testimonial:hover {
     transform: translateY(-5px);
+    transition: 0.3s;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.testimonial p {
-    font-style: italic;
-    color: #333;
+.testimonials h3 {
+    font-size: 2rem;
+    color: #0077b5;
+    margin-bottom: 30px;
 }
 
-.testimonial span {
+/* Profile Image Styling */
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #0077b5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 15px auto;
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #004182;
 }
+
+/* Testimonial Text Styling */
+.testimonial p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* LinkedIn Showcase Box Styling */
+.linkedin-showcase {
+    margin:15px 215px;
+    padding: 12px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    border-left: 4px solid #0077b5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.linkedin-showcase h4 {
+    font-size: 1.1rem;
+    color: #0077b5;
+    margin-bottom: 8px;
+}
+
+.linkedin-showcase p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.linkedin-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background-color: #0077b5;
+    padding: 6px 12px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    background-color: #005f93;
+}
+
+/* Button and Popup Styling for Each Testimonial */
+.hover-button-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.hover-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    background-color: #0077b5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hover-button:hover {
+    background-color: #005f93;
+}
+
+/* Popup Image Styling */
+.popup-image {
+    position: absolute;
+    bottom: 110%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    background: #ffffff;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.4s ease;
+}
+
+.popup-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Hover Effect to Show Popup Image */
+.hover-button-container:hover .popup-image {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px); /* Adds a slight upward transition */
+}
+
 
 /* About Section */
 .about {
