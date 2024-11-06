@@ -57,24 +57,113 @@ document.querySelector('.logo').addEventListener('mouseout', function() {
     this.style.opacity = '1';
 });
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.testimonial-slide');
+// Select modal elements
+const modal = document.getElementById("serviceModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalFeatures = document.getElementById("modalFeatures");
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+// Function to open modal with custom content
+function openModal(serviceName, serviceDescription, features) {
+    modalTitle.innerText = serviceName;
+    modalDescription.innerText = serviceDescription;
+
+    // Clear existing features and add new ones
+    modalFeatures.innerHTML = "";
+    features.forEach(feature => {
+        const li = document.createElement("li");
+        li.innerText = feature;
+        modalFeatures.appendChild(li);
     });
+    
+    modal.classList.add("show"); // Adds show class for smooth animation
 }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
+// Function to close modal
+document.querySelector(".close-btn").addEventListener("click", () => {
+    modal.classList.remove("show");
+});
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
+// Close modal when clicking outside the content
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.classList.remove("show");
+    }
+};
 
-// Initialize the first slide as visible
-showSlide(currentSlide);
+// Add event listeners to service buttons
+document.querySelectorAll(".service-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        openModal(
+            "LinkedIn Profile Audit",
+            "This service includes a thorough audit of your LinkedIn profile, providing actionable insights to improve visibility and engagement.",
+            [
+                "Comprehensive profile analysis",
+                "Personalized improvement suggestions",
+                "Profile strength assessment"
+            ]
+        );
+    });
+});
+
+
+// Get the modal, button, and close element
+document.addEventListener('DOMContentLoaded', function () {
+    const modale = document.getElementById('privacyModal');
+    const btn = document.getElementById('privacyPolicyButton');
+    const span = document.querySelector('.close');
+    const closeButton = document.querySelector('.button-close-privacy');
+
+    // Open the modal
+    btn.onclick = function () {
+        modale.style.display = 'block';
+    };
+
+    // Close modal with "x"
+    span.onclick = function () {
+        modale.style.display = 'none';
+    };
+
+    // Close modal with close button
+    closeButton.onclick = function () {
+        modale.style.display = 'none';
+    };
+
+    // Close modal by clicking outside of content area
+    window.onclick = function (event) {
+        if (event.target === modale) {
+            modale.style.display = 'none';
+        }
+    };
+});
+
+
+// Get the modal, button, and close element
+document.addEventListener('DOMContentLoaded', function () {
+    const modale2 = document.getElementById('TermsModal');
+    const btn2 = document.getElementById('TermsButton');
+    const span2 = document.querySelector('.close');
+    const closeButton2 = document.querySelector('.button-close-Terms');
+
+    // Open the modal
+    btn2.onclick = function () {
+        modale2.style.display = 'block';
+    };
+
+    // Close modal with "x"
+    span2.onclick = function () {
+        modale2.style.display = 'none';
+    };
+
+    // Close modal with close button
+    closeButton2.onclick = function () {
+        modale2.style.display = 'none';
+    };
+
+    // Close modal by clicking outside of content area
+    window.onclick = function (event) {
+        if (event.target === modale2) {
+            modale2.style.display = 'none';
+        }
+    };
+});
