@@ -350,137 +350,66 @@ header .cta-button:hover {
 }
 
 
-/* Testimonials Section */
-.testimonial {
-    height: 400px;
-    position: relative;
-    top: 0;
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+/* Case Studies Section */
+.case-studies {
+    background-color: #f3f4f6; /* Light LinkedIn gray */
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.testimonial:hover {
-    transform: translateY(-5px);
-    transition: 0.3s;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.testimonials h3 {
-    font-size: 2rem;
-    color: #0077b5;
-    margin-bottom: 30px;
-}
-
-/* Profile Image Styling */
-.profile-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px solid #0077b5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto 15px auto;
-    display: block;
-}
-
-/* Testimonial Text Styling */
-.testimonial p {
-    font-size: 1rem;
-    color: #333;
+.case-studies h3 {
+    font-size: 28px;
+    color: #0077b5; /* LinkedIn Blue */
     margin-bottom: 10px;
 }
 
-/* LinkedIn Showcase Box Styling */
-.linkedin-showcase {
-    margin:15px 215px;
-    padding: 12px;
-    background-color: #f3f4f6;
+.case-studies p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Case Card Styling */
+.case-card {
+    background-color: #ffffff;
     border-radius: 8px;
-    border-left: 4px solid #0077b5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    padding: 20px;
+    margin: 15px 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.linkedin-showcase h4 {
-    font-size: 1.1rem;
+.case-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.case-details h4 {
+    font-size: 22px;
     color: #0077b5;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-.linkedin-showcase p {
-    font-size: 0.95rem;
+.case-details p {
+    font-size: 16px;
     color: #555;
+    margin: 5px 0;
 }
 
-.linkedin-link {
+/* CTA Button */
+.case-studies .cta-button {
     display: inline-block;
-    font-size: 0.9rem;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #0077b5;
     color: #ffffff;
-    background-color: #0077b5;
-    padding: 6px 12px;
-    margin-top: 10px;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
 
-.linkedin-link:hover {
-    background-color: #005f93;
-}
-
-/* Button and Popup Styling for Each Testimonial */
-.hover-button-container {
-    position: relative;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.hover-button {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-    background-color: #0077b5;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.hover-button:hover {
-    background-color: #005f93;
-}
-
-/* Popup Image Styling */
-.popup-image {
-    position: absolute;
-    bottom: 110%; /* Position above the button */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 180px;
-    background: #ffffff;
-    padding: 8px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, transform 0.4s ease;
-}
-
-.popup-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Hover Effect to Show Popup Image */
-.hover-button-container:hover .popup-image {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(-10px); /* Adds a slight upward transition */
+.case-studies .cta-button:hover {
+    background-color: #005983;
 }
 
 
