@@ -138,32 +138,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Get the modal, button, and close element
-document.addEventListener('DOMContentLoaded', function () {
-    const modale2 = document.getElementById('TermsModal');
-    const btn2 = document.getElementById('TermsButton');
-    const span2 = document.querySelector('.close');
-    const closeButton2 = document.querySelector('.button-close-Terms');
+// Terms & Conditions Modal
+const termsModal = document.getElementById("termsModal");
+const termsBtn = document.getElementById("termsBtn");
+const closeTerms = document.getElementById("closeTerms");
 
-    // Open the modal
-    btn2.onclick = function () {
-        modale2.style.display = 'block';
-    };
+// Open modal on button click
+termsBtn.onclick = function () {
+    termsModal.style.display = "block";
+}
 
-    // Close modal with "x"
-    span2.onclick = function () {
-        modale2.style.display = 'none';
-    };
+// Close modal on close button click
+closeTerms.onclick = function () {
+    termsModal.style.display = "none";
+}
 
-    // Close modal with close button
-    closeButton2.onclick = function () {
-        modale2.style.display = 'none';
-    };
-
-    // Close modal by clicking outside of content area
-    window.onclick = function (event) {
-        if (event.target === modale2) {
-            modale2.style.display = 'none';
-        }
-    };
-});
+// Close modal when clicking outside of the modal content
+window.onclick = function (event) {
+    if (event.target == termsModal) {
+        termsModal.style.display = "none";
+    }
+}
