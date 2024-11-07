@@ -599,6 +599,14 @@ footer .social-links a:hover {
 }
 
 /* Privacy Policy Modal Styling */
+/* Logo styling for pop-up content */
+.popup-logo {
+    display: block;
+    margin: 0 auto 20px; /* Center the logo and add space below */
+    max-width: 150px; /* Set a max width */
+    height: auto;
+}
+
 .modale {
     display: none; /* Hidden by default */
     position: fixed;
