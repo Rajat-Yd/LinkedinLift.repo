@@ -1,3 +1,9 @@
+// Hide loader after the page is fully loaded
+window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+    loader.classList.add("hidden");
+});
+
 // Smooth Scrolling Functionality
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -159,3 +165,13 @@ window.onclick = function (event) {
         termsModal.style.display = "none";
     }
 }
+
+
+// JavaScript to toggle the menu
+const hamburger = document.getElementById("hamburger-icon");
+const header = document.querySelector("header");
+
+hamburger.addEventListener("click", () => {
+    header.classList.toggle("active");
+    hamburger.classList.toggle("active");
+});

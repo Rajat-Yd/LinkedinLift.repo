@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedInLift</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="/images/Logo 2.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
     <!-- Header -->
     <header>
         <div class="container">
@@ -87,71 +92,86 @@
     </section>
 
     <!-- Case Studies Section -->
-<section id="case-studies" class="case-studies">
-    <div class="container">
-        <h3>Profile Transformations</h3>
-        <p>See how our services can enhance LinkedIn profiles, improving visibility, engagement, and professionalism.</p>
+    <section id="case-studies" class="case-studies">
+        <div class="container">
+            <h3>Profile Transformations</h3>
+            <p>See how our services can enhance LinkedIn profiles, improving visibility, engagement, and
+                professionalism.</p>
 
-        <!-- Case Study Card 1 -->
-        <div class="case-card">
-            <div class="case-details">
-                <h4>Sample Case Study 1</h4>
-                <p><strong>Before:</strong> Basic profile with minimal engagement.</p>
-                <p><strong>Approach:</strong> Enhanced headline, added SEO keywords, polished summary, and created a custom banner.</p>
-                <p><strong>After:</strong> Professional, engaging profile with improved visibility.</p>
+            <!-- Case Study Card 1 -->
+            <div class="case-card">
+                <div class="case-details">
+                    <h4>Sample Case Study 1</h4>
+                    <p><strong>Before:</strong> Basic profile with minimal engagement.</p>
+                    <p><strong>Approach:</strong> Enhanced headline, added SEO keywords, polished summary, and created a
+                        custom banner.</p>
+                    <p><strong>After:</strong> Professional, engaging profile with improved visibility.</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Case Study Card 2 -->
-        <div class="case-card">
-            <div class="case-details">
-                <h4>Sample Case Study 2</h4>
-                <p><strong>Before:</strong> Inconsistent branding and missing key skills.</p>
-                <p><strong>Approach:</strong> Refined profile photo, optimized summary, and added targeted skill endorsements.</p>
-                <p><strong>After:</strong> Well-branded profile with increased searchability.</p>
+            <!-- Case Study Card 2 -->
+            <div class="case-card">
+                <div class="case-details">
+                    <h4>Sample Case Study 2</h4>
+                    <p><strong>Before:</strong> Inconsistent branding and missing key skills.</p>
+                    <p><strong>Approach:</strong> Refined profile photo, optimized summary, and added targeted skill
+                        endorsements.</p>
+                    <p><strong>After:</strong> Well-branded profile with increased searchability.</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Call to Action Button -->
-        <a href="#contact" class="cta-button">See What We Can Do For You!</a>
-    </div>
-</section>
+            <!-- Call to Action Button -->
+            <a href="#contact" class="cta-button">See What We Can Do For You!</a>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h3>Contact Us</h3>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="14ef225a-1744-4cc3-9241-11aa3f2cd0ee">
+            <div class="contact-header">
+                <h3>Contact Us</h3>
+                <div class="contact-logo">
+                    <img src="images/Logo 2.png" alt="LinkedInLift Logo">
+                </div>
+            </div>
+            <form action="#" method="POST">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="ex. John Doe" class="input1" required>
+                <input class="input" type="text" id="name" name="name" placeholder="Your full name" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="ex. john_256@gmail.com" class="input1"
-                    required>
+                <input class="input" type="email" id="email" name="email" placeholder="Your email address" required>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Type message here...." required></textarea>
+                <label for="phone">Phone Number</label>
+                <input class="input" type="tel" id="phone" name="phone" placeholder="Your phone number (optional)">
+
+                <label for="linkedin">LinkedIn Profile URL</label>
+                <input class="input" type="url" id="linkedin" name="linkedin" placeholder="Your LinkedIn profile URL">
+
+                <label for="message">Message or Requirement detail's</label>
+                <textarea id="message" name="message" placeholder="How can we assist you?" required></textarea>
 
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
         </div>
     </section>
 
+
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 LinkedinLift. All rights reserved.</p>
+            <p>&copy; 2024 <b>LinkedinLift !</b> All rights reserved.</p>
             <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
-
         <!-- Privacy Policy Button  -->
         <button id="privacyPolicyButton" class="privacy-button">Privacy Policy</button>
         <button id="termsBtn" class="terms-btn">Terms & Conditions</button>
-
     </footer>
 
     <!-- Privacy Policy Modal -->
@@ -223,12 +243,15 @@
             <h3>Service Fees and Payment</h3>
             <ul>
                 <li>Fees are set based on the selected service package and are payable before service commencement.</li>
-                <li>Refunds are issued only if the project has not started or in the case of non-completion on our part.</li>
+                <li>Refunds are issued only if the project has not started or in the case of non-completion on our part.
+                </li>
             </ul>
             <h3>Client Responsibilities</h3>
             <ul>
                 <li>Provide accurate and up-to-date information needed for profile optimization.</li>
-                <li>Understand that LinkedInLift is not responsible for client achievements post-optimization and to increase the number of follower's, as outcomes may vary depending on LinkedIn's platform changes and market conditions.</li>
+                <li>Understand that LinkedInLift is not responsible for client achievements post-optimization and to
+                    increase the number of follower's, as outcomes may vary depending on LinkedIn's platform changes and
+                    market conditions.</li>
             </ul>
 
             <!-- Add more content as needed -->
