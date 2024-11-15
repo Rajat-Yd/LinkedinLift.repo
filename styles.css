@@ -937,3 +937,103 @@ footer .social-links a:hover {
         padding: 6px 12px; /* Slightly smaller button on small screens */
     }
 }
+
+.slider-section {
+    height: 90vh;
+    margin-top: 40px;
+    background: linear-gradient(to right, #0077b5, #005983);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider-wrapper {
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.profile-image {
+    width: 50%;
+    height: 100%;
+    border-radius: 5px; /* Subtle rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin:15px;
+    object-fit: cover; /* Ensures aspect ratio integrity */
+}
+
+.profile-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background: #0077b5;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.profile-button:hover {
+    background: #005983;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.slider-nav.prev {
+    left: 10px;
+}
+
+.slider-nav.next {
+    right: 10px;
+}
+
+.slider-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 100%; /* Adjusts to screen size */
+    }
+
+    .profile-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
